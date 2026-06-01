@@ -70,6 +70,6 @@ Si despues de correr el script de _pruebagpu_ aparece algun error, he aqui algun
 | `Cuda Disponible = False` |Cuando Cuda no esta disponible, es posible que el gpu no soporte CUDA*|
 | `Versión CUDA de torch` | la mas importante, si obtenemos un error o no muestra la version, es probable que la version de pytorch no sea compatible y tengamos que instalar e incluso degradar a otra version, para este proyecto se uso la 12.4 |
 
-*segun esta lista de https://es.wikipedia.org/wiki/CUDA hay muchas gpus soportadas para CUDA, incluso las mas antiguas (ya mas de 15 años) pero es algo que no se probo, en el desarrollo se uso una de la serie RTX 3000 (3060)
+*segun esta lista de https://es.wikipedia.org/wiki/CUDA hay muchas gpus soportadas para CUDA, incluso las mas antiguas (ya mas de 15 años); Sin embargó, esto es algo que no se probó. En el desarrollo se uso una GPU de la serie RTX 3000 (3060).
 
 

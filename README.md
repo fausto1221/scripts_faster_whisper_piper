@@ -3,6 +3,9 @@
 
 ##Tabla de contenidos
 - [Instalando Faster-Whisper](InstalandoFasterWhsiper)
+- [Instalando Piper](InstalandoPiper)
+- [El Controlador para Webots](ElControladorParaWebots)
+
 
 
 
@@ -33,4 +36,26 @@ Si todos los mensajes  son positivos despues de hacer nuestra instalacion, es 10
 Para este momnento y si asi lo deseamos, podemos correr el programa que contiene el transcriptor de audio a texto _transcriptor_faster_whisper.py_ y hacer pruebas.
 De otra manera podemos proceder a instalar Piper.
 
-##ins
+## Instalando Piper
+
+La instalacion de piper no supone mayor complicacion, ya que lo que nos interesa es usar su API de Python https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/API_PYTHON.md 
+
+***Tambien se proveen las instrucciones para usar aceleracion CUDA. Para estas pruebas y el controlador, se opto por no usarlo por un posible conclicto entre los requisitos de las versiones de cuda que pueda necesitar cada motor(tanto faster-whisper como piper). Aunque de nuevo y aclaro, esta opcion nunca se exploró.***
+
+Lo unico a tener a consideracion es la voz, en el progrma _prueba_piper_frase_fija.py_ incluí una funcion para comprabar que siempre descargue y cargue correctamente. La primera vez tarda un poco, despues es inmediato.
+
+En el caso de la voz predeterminada incluye la de _en_US-lessac-medium_ en. En este caso se uso la de _es_MX-claude-high_
+asi que el comando para cargar y usar la voz seria:
+```
+python3 -m piper.download_voices es_MX-claude-high
+```
+
+El programa que se tiene para hacer pruebas _prueba_piper_frase_fija.py_, no guarda un archivo de audio, y la frase pretedeterminada puede ser modificada a conveniencia.
+
+## El Controlador para Webots
+
+En el caso de webots, si ambos programas se pueden ejecutar por separado, el controlador _controlador_whisper_piper_ funcionara sin duda alguna.
+
+
+
+

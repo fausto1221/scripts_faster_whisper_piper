@@ -28,7 +28,7 @@ en caso de que marque error con la version que incluyen las librerias de arriba,
 un comando puede solucionar el problema que creo que puede ser el mas comun:
 
 ```
--m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+-m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
 ```
 
 Despues de Instalar todo lo que nos pide Faster-Whisper incluí un script para probar que todo haya quedado en orden. lo podemos encontrar como _pruebagpu.py_

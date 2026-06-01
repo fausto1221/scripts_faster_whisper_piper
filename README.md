@@ -1,10 +1,12 @@
-# Instalacion y uso de los scripts para  configurar faster whysper y piper
+# Instalacion y uso de los scripts para  configurar Faster-Whisper y Piper
 
 
-##Tabla de contenidos
+## Tabla de contenidos
 - [Instalando Faster-Whisper](InstalandoFasterWhsiper)
 - [Instalando Piper](InstalandoPiper)
 - [El Controlador para Webots](ElControladorParaWebots)
+- [Posibles Errores](PosiblesErrores)
+
 
 
 
@@ -21,7 +23,7 @@ El hub del proyecto nos da instrucciones y los requisitos para usar faster Whisp
 Los enlaces los provee el mismo proyecto y son los mismos que se usaron.
 
 Si se sigue la ruta de usar el GPU, solo hay que prestar atencion en las librerias necesarias para CUDA, la que mas puede causar error es la referente a Pytorch.
-en caso de que marque error con la version que incluyen las librerias de arriba, puedo especificar que la me funciono es la 121
+en caso de que marque error con la version que incluyen las librerias de arriba, puedo especificar que la me funciono es la 124
 
 un comando puede solucionar el problema que creo que puede ser el mas comun:
 
@@ -57,5 +59,17 @@ El programa que se tiene para hacer pruebas _prueba_piper_frase_fija.py_, no gua
 En el caso de webots, si ambos programas se pueden ejecutar por separado, el controlador _controlador_whisper_piper_ funcionara sin duda alguna.
 
 
+## Posibles errores
+
+De los problemas mas comunes fueron con Whisper. Con Piper casi no encontre ninguno. 
+
+Si despues de correr el script de _pruebagpu_ aparece algun error, he aqui algunas explicaciones:
+
+| Error | Descripcion |
+| --- | --- |
+| `Cuda Disponible = False` |Cuando Cuda no esta disponible, es posible que el gpu no soporte CUDA*|
+| `Versión CUDA de torch` | la mas importante, si obtenemos un error o no muestra la version, es probable que la version de pytorch no sea compatible y tengamos que instalar e incluso degradar a otra version, para este proyecto se uso la 12.4 |
+
+*segun esta lista de https://es.wikipedia.org/wiki/CUDA hay muchas gpus soportadas para CUDA, incluso las mas antiguas (ya mas de 15 años) pero es algo que no se probo, en el desarrollo se uso una de la serie RTX 3000 (3060)
 
 
